@@ -8,6 +8,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Environment;
+import pl.zajavka.infrastructure.database.entity.*;
 
 import java.util.Map;
 
@@ -41,14 +42,20 @@ public class HibernateUtil {
                     .applySettings(HIBERNATE_SETTINGS)
                     .applySettings(HIKARI_CP_SETTINGS)
                     .build();
+
             Metadata metadata = new MetadataSources(standardServiceRegistry)
-                    .addAnnotatedClass()
-                    .addAnnotatedClass()
-                    .addAnnotatedClass()
-                    .addAnnotatedClass()
-                    .addAnnotatedClass()
-                    .addAnnotatedClass()
-                    .addAnnotatedClass()
+                    .addAnnotatedClass(AddressEntity.class)
+                    .addAnnotatedClass(CarServiceRequestEntity.class)
+                    .addAnnotatedClass(CarToBuyEntity.class)
+                    .addAnnotatedClass(CarToServiceEntity.class)
+                    .addAnnotatedClass(CustomerEntity.class)
+                    .addAnnotatedClass(InvoiceEntity.class)
+                    .addAnnotatedClass(MechanicEntity.class)
+                    .addAnnotatedClass(PartEntity.class)
+                    .addAnnotatedClass(SalesmanEntity.class)
+                    .addAnnotatedClass(ServiceEntity.class)
+                    .addAnnotatedClass(ServiceMechanicEntity.class)
+                    .addAnnotatedClass(ServicePartEntity.class)
                     .getMetadataBuilder()
                     .build();
 
