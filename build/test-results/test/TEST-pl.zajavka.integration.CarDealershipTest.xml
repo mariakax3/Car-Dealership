@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.zajavka.integration.CarDealershipTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-05-10T19:58:48" hostname="LAPTOP-O9433SLL" time="0.087">
+  <properties/>
+  <testcase name="purge()" classname="pl.zajavka.integration.CarDealershipTest" time="0.061"/>
+  <testcase name="init()" classname="pl.zajavka.integration.CarDealershipTest" time="0.001"/>
+  <testcase name="purchase()" classname="pl.zajavka.integration.CarDealershipTest" time="0.001"/>
+  <testcase name="makeServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.002"/>
+  <testcase name="processServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.004"/>
+  <testcase name="printCarHistory()" classname="pl.zajavka.integration.CarDealershipTest" time="0.001"/>
+  <system-out><![CDATA[21:58:48,068 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
+21:58:48,099 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+21:58:48,103 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
+21:58:48,324 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+21:58:48,324 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+21:58:48,345 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+21:58:48,348 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
+21:58:48,407 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+21:58:48,408 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+21:58:48,409 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@54dcfa5a - End of configuration.
+21:58:48,412 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@1817f1eb - Registering current configuration as safe fallback point
+
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 1
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 2
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 3
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 4
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 5
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 6
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
