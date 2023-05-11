@@ -16,7 +16,7 @@ import java.util.Map;
 public class HibernateUtil {
 
     private static final Map<String, Object> HIBERNATE_SETTINGS = Map.ofEntries(
-            Map.entry(Environment.DRIVER, "org.postgres.Driver"),
+            Map.entry(Environment.DRIVER, "org.postgresql.Driver"),
             Map.entry(Environment.URL, "jdbc:postgresql://localhost:5432/car_dealership"),
             Map.entry(Environment.USER, "postgres"),
             Map.entry(Environment.PASS, "postgres"),
