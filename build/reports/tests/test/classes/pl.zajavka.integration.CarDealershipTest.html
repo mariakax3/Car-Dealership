@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.034s</div>
+<div class="counter">4.663s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,32 +79,32 @@
 </thead>
 <tr>
 <td class="success">init()</td>
-<td class="success">0.001s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">makeServiceRequests()</td>
-<td class="success">0.002s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">printCarHistory()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">processServiceRequests()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">processServiceRequests()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">purchase()</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">purge()</td>
-<td class="success">0.027s</td>
+<td class="success">4.648s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -112,31 +112,43 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>08:52:05,798 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
-08:52:05,823 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-08:52:05,827 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
-08:52:06,007 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
-08:52:06,008 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-08:52:06,025 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-08:52:06,028 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
-08:52:06,068 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-08:52:06,068 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
-08:52:06,069 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@3bcbb589 - End of configuration.
-08:52:06,070 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@3b00856b - Registering current configuration as safe fallback point
+<pre>10:42:19,737 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
+10:42:19,779 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+10:42:19,784 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
+10:42:19,975 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+10:42:19,975 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+10:42:19,988 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+10:42:19,992 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
+10:42:20,028 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+10:42:20,029 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+10:42:20,030 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@35d08e6c - End of configuration.
+10:42:20,031 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@53d102a2 - Registering current configuration as safe fallback point
 
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 1
+INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@184dbacc
+INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: delete from service_mechanic
+Hibernate: delete from service_part
+Hibernate: delete from car_service_request
+Hibernate: delete from invoice
+Hibernate: delete from mechanic
+Hibernate: delete from part
+Hibernate: delete from service
+Hibernate: delete from car_to_service
+Hibernate: delete from car_to_buy
+Hibernate: delete from customer
+Hibernate: delete from address
+Hibernate: delete from salesman
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 2
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 3
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 4
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 5
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 6
-INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
-INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
-INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6482eef
-INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
 </pre>
@@ -150,7 +162,7 @@ INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 11 maj 2023, 08:52:09</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 11 maj 2023, 10:42:24</p>
 </div>
 </div>
 </body>

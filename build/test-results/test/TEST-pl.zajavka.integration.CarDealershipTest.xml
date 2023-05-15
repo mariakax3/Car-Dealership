@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.zajavka.integration.CarDealershipTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-05-11T06:52:06" hostname="LAPTOP-O9433SLL" time="0.041">
+<testsuite name="pl.zajavka.integration.CarDealershipTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-05-11T08:42:20" hostname="LAPTOP-O9433SLL" time="4.68">
   <properties/>
-  <testcase name="purge()" classname="pl.zajavka.integration.CarDealershipTest" time="0.027"/>
-  <testcase name="init()" classname="pl.zajavka.integration.CarDealershipTest" time="0.001"/>
-  <testcase name="purchase()" classname="pl.zajavka.integration.CarDealershipTest" time="0.001"/>
-  <testcase name="makeServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.002"/>
-  <testcase name="processServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.002"/>
-  <testcase name="printCarHistory()" classname="pl.zajavka.integration.CarDealershipTest" time="0.001"/>
-  <system-out><![CDATA[08:52:05,798 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
-08:52:05,823 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-08:52:05,827 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
-08:52:06,007 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
-08:52:06,008 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-08:52:06,025 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-08:52:06,028 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
-08:52:06,068 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-08:52:06,068 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
-08:52:06,069 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@3bcbb589 - End of configuration.
-08:52:06,070 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@3b00856b - Registering current configuration as safe fallback point
+  <testcase name="purge()" classname="pl.zajavka.integration.CarDealershipTest" time="4.648"/>
+  <testcase name="init()" classname="pl.zajavka.integration.CarDealershipTest" time="0.004"/>
+  <testcase name="purchase()" classname="pl.zajavka.integration.CarDealershipTest" time="0.002"/>
+  <testcase name="makeServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.004"/>
+  <testcase name="processServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.003"/>
+  <testcase name="printCarHistory()" classname="pl.zajavka.integration.CarDealershipTest" time="0.002"/>
+  <system-out><![CDATA[10:42:19,737 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
+10:42:19,779 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+10:42:19,784 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
+10:42:19,975 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+10:42:19,975 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+10:42:19,988 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+10:42:19,992 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
+10:42:20,028 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+10:42:20,029 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+10:42:20,030 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@35d08e6c - End of configuration.
+10:42:20,031 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@53d102a2 - Registering current configuration as safe fallback point
 
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 1
+INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@184dbacc
+INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: delete from service_mechanic
+Hibernate: delete from service_part
+Hibernate: delete from car_service_request
+Hibernate: delete from invoice
+Hibernate: delete from mechanic
+Hibernate: delete from part
+Hibernate: delete from service
+Hibernate: delete from car_to_service
+Hibernate: delete from car_to_buy
+Hibernate: delete from customer
+Hibernate: delete from address
+Hibernate: delete from salesman
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 2
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 3
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 4
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 5
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 6
-INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
-INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
-INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6482eef
-INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
 ]]></system-out>
