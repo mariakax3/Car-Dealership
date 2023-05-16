@@ -3,8 +3,9 @@ package pl.zajavka.business.management;
 public interface Keys {
 
     enum InputDataGroup {
-        INIT
-
+        INIT,
+        BUY_FIRST_TIME,
+        BUY_AGAIN
     }
 
     enum Entity {
@@ -12,6 +13,7 @@ public interface Keys {
         MECHANIC,
         CAR,
         SERVICE,
-        PART
+        PART,
+        CUSTOMER
     }
 }
