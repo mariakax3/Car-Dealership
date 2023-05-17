@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.zajavka.integration.CarDealershipTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-05-17T10:22:33" hostname="LAPTOP-O9433SLL" time="5.994">
+<testsuite name="pl.zajavka.integration.CarDealershipTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-05-17T11:00:06" hostname="LAPTOP-O9433SLL" time="7.269">
   <properties/>
-  <testcase name="purge()" classname="pl.zajavka.integration.CarDealershipTest" time="4.874"/>
-  <testcase name="init()" classname="pl.zajavka.integration.CarDealershipTest" time="0.219"/>
-  <testcase name="purchase()" classname="pl.zajavka.integration.CarDealershipTest" time="0.49"/>
-  <testcase name="makeServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.113"/>
-  <testcase name="processServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.282"/>
-  <testcase name="printCarHistory()" classname="pl.zajavka.integration.CarDealershipTest" time="0.002"/>
-  <system-out><![CDATA[12:22:33,408 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
-12:22:33,448 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-12:22:33,453 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
-12:22:33,669 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
-12:22:33,669 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-12:22:33,681 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-12:22:33,683 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
-12:22:33,721 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-12:22:33,722 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
-12:22:33,723 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@35d08e6c - End of configuration.
-12:22:33,724 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@53d102a2 - Registering current configuration as safe fallback point
+  <testcase name="purge()" classname="pl.zajavka.integration.CarDealershipTest" time="5.501"/>
+  <testcase name="init()" classname="pl.zajavka.integration.CarDealershipTest" time="0.196"/>
+  <testcase name="purchase()" classname="pl.zajavka.integration.CarDealershipTest" time="0.808"/>
+  <testcase name="makeServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.267"/>
+  <testcase name="processServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.346"/>
+  <testcase name="printCarHistory()" classname="pl.zajavka.integration.CarDealershipTest" time="0.141"/>
+  <system-out><![CDATA[13:00:06,268 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
+13:00:06,330 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+13:00:06,339 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
+13:00:06,582 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+13:00:06,582 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+13:00:06,597 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+13:00:06,599 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
+13:00:06,638 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+13:00:06,638 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+13:00:06,639 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@35d08e6c - End of configuration.
+13:00:06,641 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@53d102a2 - Registering current configuration as safe fallback point
 
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 1
 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
@@ -164,6 +164,36 @@ Hibernate: insert into service_part (car_service_request_id, part_id, quantity) 
 Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 where c1_0.car_service_request_id=?
 Hibernate: update car_service_request set car_to_service_id=?, car_service_request_number=?, completed_date_time=?, customer_id=?, customer_comment=?, received_date_time=? where car_service_request_id=?
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 6
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_to_service_id,c1_0.car_service_request_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 where c1_0.car_to_service_id=?
+Hibernate: select s1_0.car_service_request_id,s1_0.service_mechanic_id,s1_0.comment,s1_0.hours,s1_0.mechanic_id,s1_0.service_id from service_mechanic s1_0 where s1_0.car_service_request_id=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_id=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_id=?
+Hibernate: select s1_0.car_service_request_id,s1_0.service_part_id,s1_0.part_id,s1_0.quantity from service_part s1_0 where s1_0.car_service_request_id=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+INFO  pl.zajavka.business.CarService - ###CAR HISTORY FOR VIN: [2C3CDYAG2DH731952]
+INFO  pl.zajavka.business.CarService - ###SERVICE REQUEST: [ServiceRequest{serviceRequestNumber='2023.4.17-13.0.13.30', receivedDateTime=2023-05-17T13:00:13.383232+02:00, completedDateTime=2023-05-17T13:00:13.667069+02:00, customerComment='Koło mi odpadło}]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service[serviceCode=58394-014, description=Wymiana koła, price=240.20]]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service[serviceCode=55319-866, description=Strojenie koła, price=50.20]]
+INFO  pl.zajavka.business.CarService - ###PART: [Part[serialNumber=11523-7310, description=Koło, price=320.11]]
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_to_service_id,c1_0.car_service_request_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 where c1_0.car_to_service_id=?
+Hibernate: select s1_0.car_service_request_id,s1_0.service_mechanic_id,s1_0.comment,s1_0.hours,s1_0.mechanic_id,s1_0.service_id from service_mechanic s1_0 where s1_0.car_service_request_id=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_id=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_id=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_id=?
+Hibernate: select s1_0.car_service_request_id,s1_0.service_part_id,s1_0.part_id,s1_0.quantity from service_part s1_0 where s1_0.car_service_request_id=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+INFO  pl.zajavka.business.CarService - ###CAR HISTORY FOR VIN: [1GCEC19X27Z109567]
+INFO  pl.zajavka.business.CarService - ###SERVICE REQUEST: [ServiceRequest{serviceRequestNumber='2023.4.17-13.0.13.48', receivedDateTime=2023-05-17T13:00:13.450235+02:00, completedDateTime=2023-05-17T13:00:13.817271+02:00, customerComment='Olej mi cieknie na stopy}]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service[serviceCode=0008-0407, description=Wymiana oleju, price=140.15]]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service[serviceCode=43063-180, description=Wymiana korka do oleju, price=17.19]]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service[serviceCode=14222-2022, description=Wymiana filtra paliwa, price=14.98]]
+INFO  pl.zajavka.business.CarService - ###PART: [Part[serialNumber=54340-777, description=Olej, price=270.18]]
+INFO  pl.zajavka.business.CarService - ###PART: [Part[serialNumber=68180-556, description=Korek do oleju, price=140.15]]
+INFO  pl.zajavka.business.CarService - ###PART: [Part[serialNumber=0268-1264, description=Filtr powietrza, price=90.19]]
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
 ]]></system-out>
