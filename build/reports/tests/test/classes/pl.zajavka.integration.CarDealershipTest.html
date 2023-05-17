@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.409s</div>
+<div class="counter">5.980s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,32 +79,32 @@
 </thead>
 <tr>
 <td class="success">init()</td>
-<td class="success">0.126s</td>
+<td class="success">0.219s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">makeServiceRequests()</td>
-<td class="success">0.101s</td>
+<td class="success">0.113s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">printCarHistory()</td>
-<td class="success">0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">processServiceRequests()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">processServiceRequests()</td>
+<td class="success">0.282s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">purchase()</td>
-<td class="success">0.402s</td>
+<td class="success">0.490s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">purge()</td>
-<td class="success">3.771s</td>
+<td class="success">4.874s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -112,23 +112,23 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>08:28:18,241 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
-08:28:18,274 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-08:28:18,277 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
-08:28:18,432 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
-08:28:18,432 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-08:28:18,440 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-08:28:18,442 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
-08:28:18,472 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-08:28:18,472 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
-08:28:18,473 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@35d08e6c - End of configuration.
-08:28:18,474 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@53d102a2 - Registering current configuration as safe fallback point
+<pre>12:22:33,408 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
+12:22:33,448 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+12:22:33,453 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
+12:22:33,669 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+12:22:33,669 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+12:22:33,681 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:22:33,683 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
+12:22:33,721 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+12:22:33,722 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+12:22:33,723 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@35d08e6c - End of configuration.
+12:22:33,724 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@53d102a2 - Registering current configuration as safe fallback point
 
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 1
 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
 INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@280e8a1a
+INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41b0ae4c
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
@@ -227,6 +227,47 @@ Hibernate: insert into address (address, city, country, postal_code) values (?, 
 Hibernate: insert into customer (address_id, email, name, phone, surname) values (?, ?, ?, ?, ?)
 Hibernate: insert into car_service_request (car_to_service_id, car_service_request_number, completed_date_time, customer_id, customer_comment, received_date_time) values (?, ?, ?, ?, ?, ?)
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 5
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c2_0.vin=? and c1_0.completed_date_time is null
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c2_0.vin=? and c1_0.completed_date_time is null
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 where c1_0.car_service_request_id=?
+Hibernate: update car_service_request set car_to_service_id=?, car_service_request_number=?, completed_date_time=?, customer_id=?, customer_comment=?, received_date_time=? where car_service_request_id=?
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c2_0.vin=? and c1_0.completed_date_time is null
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c2_0.vin=? and c1_0.completed_date_time is null
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c2_0.vin=? and c1_0.completed_date_time is null
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.part_id=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 where c1_0.car_service_request_id=?
+Hibernate: update car_service_request set car_to_service_id=?, car_service_request_number=?, completed_date_time=?, customer_id=?, customer_comment=?, received_date_time=? where car_service_request_id=?
 INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 6
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -241,7 +282,7 @@ INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 17 maj 2023, 08:28:23</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 17 maj 2023, 12:22:40</p>
 </div>
 </div>
 </body>
