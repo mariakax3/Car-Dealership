@@ -2,10 +2,7 @@ package pl.zajavka.integration;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
-import pl.zajavka.business.CarPurchaseService;
-import pl.zajavka.business.CarService;
-import pl.zajavka.business.CustomerService;
-import pl.zajavka.business.SalesmanService;
+import pl.zajavka.business.*;
 import pl.zajavka.business.dao.CarDAO;
 import pl.zajavka.business.dao.CustomerDAO;
 import pl.zajavka.business.dao.SalesmanDAO;
@@ -23,23 +20,33 @@ public class CarDealershipTest {
 
     private CarDealershipManagementService carDealershipManagementService;
     private CarPurchaseService carPurchaseService;
+    private CarServiceRequestService carServiceRequestService;
 
     @BeforeEach
     void beforeEach() {
         CarDAO carDAO = new CarRepository();
         SalesmanDAO salesmanDAO = new SalesmanRepository();
         CustomerDAO customerDAO = new CustomerRepository();
+        CarService carService = new CarService(carDAO);
+        CustomerService customerService = new CustomerService(customerDAO);
+        SalesmanService salesmanService = new SalesmanService(salesmanDAO);
         FileDataPreparationService fileDataPreparationService = new FileDataPreparationService();
+        CarDealershipManagementRepository carDealershipManagementDAO = new CarDealershipManagementRepository();
 
         this.carDealershipManagementService = new CarDealershipManagementService(
-                new CarDealershipManagementRepository(),
+                carDealershipManagementDAO,
                 fileDataPreparationService
         );
         this.carPurchaseService = new CarPurchaseService(
                 fileDataPreparationService,
-                new CustomerService(customerDAO),
-                new CarService(carDAO),
-                new SalesmanService(salesmanDAO)
+                customerService,
+                carService,
+                salesmanService
+        );
+        this.carServiceRequestService = new CarServiceRequestService(
+                fileDataPreparationService,
+                carService,
+                customerService
         );
     }
 
@@ -73,7 +80,7 @@ public class CarDealershipTest {
     @Order(4)
     void makeServiceRequests() {
         log.info("### RUNNING ORDER 4");
-
+        carServiceRequestService.requestService();
     }
 
     @Test
