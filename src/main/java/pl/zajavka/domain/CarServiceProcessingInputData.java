@@ -7,7 +7,7 @@ import lombok.With;
 @With
 @Value
 @Builder
-public class CarServiceProcessingRequest {
+public class CarServiceProcessingInputData {
 
     String mechanicPesel;
     String carVin;
@@ -17,4 +17,5 @@ public class CarServiceProcessingRequest {
     Integer hours;
     String comment;
     String done;
+
 }
