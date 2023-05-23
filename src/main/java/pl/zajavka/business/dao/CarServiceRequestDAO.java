@@ -5,5 +5,5 @@ import pl.zajavka.domain.CarServiceRequest;
 import java.util.Set;
 
 public interface CarServiceRequestDAO {
-    Set<CarServiceRequest> findAnyActiveServiceRequestsByCarVin(String carVin);
+    Set<CarServiceRequest> findActiveServiceRequestsByCarVin(String carVin);
 }

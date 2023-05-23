@@ -1,6 +1,7 @@
 package pl.zajavka.business;
 
 import lombok.AllArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 import pl.zajavka.business.dao.CarServiceRequestDAO;
 import pl.zajavka.business.management.FileDataPreparationService;
 import pl.zajavka.domain.CarServiceRequest;
@@ -23,6 +24,7 @@ public class CarServiceRequestService {
     private final CustomerService customerService;
     private final CarServiceRequestDAO carServiceRequestDAO;
 
+    @Transactional
     public void requestService() {
         Map<Boolean, List<CarServiceRequest>> serviceRequests = fileDataPreparationService.createCarServiceRequests().stream()
                 .collect(Collectors.groupingBy(element -> element.getCar().carBoughtHere()));
@@ -88,8 +90,9 @@ public class CarServiceRequestService {
         return new Random().nextInt(max - min) + min;
     }
 
+    @Transactional
     public CarServiceRequest findAnyActiveServiceRequest(String carVin) {
-        Set<CarServiceRequest> serviceRequests = carServiceRequestDAO.findAnyActiveServiceRequestsByCarVin(carVin);
+        Set<CarServiceRequest> serviceRequests = carServiceRequestDAO.findActiveServiceRequestsByCarVin(carVin);
         if (serviceRequests.size() != 1) {
             throw new RuntimeException("There should be only one active service request at a time, cat vin: [%s]".formatted(carVin));
         }
