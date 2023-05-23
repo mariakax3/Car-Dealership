@@ -2,6 +2,7 @@ package pl.zajavka.infrastructure.database.repository;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import pl.zajavka.business.dao.ServiceRequestProcessingDAO;
 import pl.zajavka.domain.CarServiceRequest;
 import pl.zajavka.domain.ServiceMechanic;
@@ -31,6 +32,7 @@ public class ServiceRequestProcessingRepository implements ServiceRequestProcess
     private final ServicePartEntityMapper servicePartEntityMapper;
 
     @Override
+    @Transactional
     public void process(CarServiceRequest serviceRequest, ServiceMechanic serviceMechanic) {
         ServiceMechanicEntity serviceMechanicEntity = serviceMechanicEntityMapper.mapToEntity(serviceMechanic);
         serviceMechanicJpaRepository.saveAndFlush(serviceMechanicEntity);
@@ -44,6 +46,7 @@ public class ServiceRequestProcessingRepository implements ServiceRequestProcess
     }
 
     @Override
+    @Transactional
     public void process(CarServiceRequest serviceRequest, ServiceMechanic serviceMechanic, ServicePart servicePart) {
         PartEntity partEntity = partJpaRepository.findById(servicePart.getPart().getPartId()).orElseThrow();
         ServicePartEntity servicePartEntity = servicePartEntityMapper.mapToEntity(servicePart);

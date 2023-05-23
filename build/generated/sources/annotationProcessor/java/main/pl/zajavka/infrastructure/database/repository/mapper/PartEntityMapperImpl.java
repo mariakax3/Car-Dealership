@@ -7,7 +7,7 @@ import pl.zajavka.infrastructure.database.entity.PartEntity;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-05-23T09:00:45+0200",
+    date = "2023-05-23T10:34:07+0200",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component

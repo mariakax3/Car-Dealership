@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.zajavka.integration.CarDealershipTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-05-23T09:00:11" hostname="LAPTOP-O9433SLL" time="5.051">
+  <properties/>
+  <testcase name="purchase()" classname="pl.zajavka.integration.CarDealershipTest" time="2.315"/>
+  <testcase name="makeServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="1.793"/>
+  <testcase name="processServiceRequests()" classname="pl.zajavka.integration.CarDealershipTest" time="0.333"/>
+  <testcase name="printCarHistory()" classname="pl.zajavka.integration.CarDealershipTest" time="0.272"/>
+  <testcase name="verify()" classname="pl.zajavka.integration.CarDealershipTest" time="0.317"/>
+  <system-out><![CDATA[11:00:03,378 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.6
+11:00:03,408 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+11:00:03,412 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/main/logback.xml]
+11:00:03,610 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+11:00:03,611 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+11:00:03,637 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+11:00:03,640 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
+11:00:03,702 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+11:00:03,703 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+11:00:03,703 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@302a07d - End of configuration.
+11:00:03,705 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@5cdd09b1 - Registering current configuration as safe fallback point
+
+INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 12 JPA repository interfaces.
+INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'persistenceJPAConfiguration' of type [pl.zajavka.infrastructure.configuration.PersistenceJPAConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.16.0 by Redgate
+INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+INFO  o.f.c.i.license.VersionPrinter - 
+INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/car_dealership (PostgreSQL 14.6)
+INFO  o.f.core.internal.command.DbValidate - Successfully validated 13 migrations (execution time 00:00.057s)
+INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.1 - init car dealership salesman"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.2 - init car dealership address"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.3 - init car dealership customer"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.4 - init car dealership car to buy"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.5 - init car dealership car to service"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.6 - init car dealership service"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.7 - init car dealership part"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.8 - init car dealership mechanic"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.9 - init car dealership invoice"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.10 - init car dealership car service request"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.11 - init car dealership service part"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1.12 - init car dealership service mechanic"
+INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2.1 - init car dealership data"
+INFO  o.f.core.internal.command.DbMigrate - Successfully applied 13 migrations to schema "public", now at version v2.1 (execution time 00:00.416s)
+INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: pl.zajavka.infrastructure.database.repository.jpa.CustomerJpaRepository
+INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: pl.zajavka.infrastructure.database.repository.jpa.CarToBuyJpaRepository
+WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: pl.zajavka.infrastructure.database.repository.jpa.CarToServiceJpaRepository
+WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: pl.zajavka.infrastructure.database.repository.jpa.SalesmanJpaRepository
+WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: pl.zajavka.infrastructure.database.repository.jpa.MechanicJpaRepository
+WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: pl.zajavka.infrastructure.database.repository.jpa.ServiceJpaRepository
+WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: pl.zajavka.infrastructure.database.repository.jpa.PartJpaRepository
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 3
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: select s1_0.salesman_id,s1_0.name,s1_0.pesel,s1_0.surname from salesman s1_0 where s1_0.pesel=?
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: select s1_0.salesman_id,s1_0.name,s1_0.pesel,s1_0.surname from salesman s1_0 where s1_0.pesel=?
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: select s1_0.salesman_id,s1_0.name,s1_0.pesel,s1_0.surname from salesman s1_0 where s1_0.pesel=?
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: select s1_0.salesman_id,s1_0.name,s1_0.pesel,s1_0.surname from salesman s1_0 where s1_0.pesel=?
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: select s1_0.salesman_id,s1_0.name,s1_0.pesel,s1_0.surname from salesman s1_0 where s1_0.pesel=?
+Hibernate: insert into address (address, city, country, postal_code) values (?, ?, ?, ?)
+Hibernate: insert into customer (address_id, email, name, phone, surname) values (?, ?, ?, ?, ?)
+Hibernate: insert into invoice (car_to_buy_id, customer_id, date_time, invoice_number, salesman_id) values (?, ?, ?, ?, ?)
+Hibernate: insert into address (address, city, country, postal_code) values (?, ?, ?, ?)
+Hibernate: insert into customer (address_id, email, name, phone, surname) values (?, ?, ?, ?, ?)
+Hibernate: insert into invoice (car_to_buy_id, customer_id, date_time, invoice_number, salesman_id) values (?, ?, ?, ?, ?)
+Hibernate: insert into address (address, city, country, postal_code) values (?, ?, ?, ?)
+Hibernate: insert into customer (address_id, email, name, phone, surname) values (?, ?, ?, ?, ?)
+Hibernate: insert into invoice (car_to_buy_id, customer_id, date_time, invoice_number, salesman_id) values (?, ?, ?, ?, ?)
+Hibernate: insert into address (address, city, country, postal_code) values (?, ?, ?, ?)
+Hibernate: insert into customer (address_id, email, name, phone, surname) values (?, ?, ?, ?, ?)
+Hibernate: insert into invoice (car_to_buy_id, customer_id, date_time, invoice_number, salesman_id) values (?, ?, ?, ?, ?)
+Hibernate: insert into address (address, city, country, postal_code) values (?, ?, ?, ?)
+Hibernate: insert into customer (address_id, email, name, phone, surname) values (?, ?, ?, ?, ?)
+Hibernate: insert into invoice (car_to_buy_id, customer_id, date_time, invoice_number, salesman_id) values (?, ?, ?, ?, ?)
+Hibernate: select c1_0.customer_id,c1_0.address_id,c1_0.email,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.email=?
+Hibernate: select a1_0.address_id,a1_0.address,a1_0.city,a1_0.country,a1_0.postal_code from address a1_0 where a1_0.address_id=?
+Hibernate: select c1_0.customer_id,a1_0.address_id,a1_0.address,a1_0.city,a1_0.country,a1_0.postal_code,c2_0.customer_id,c2_0.car_service_request_id,c2_0.car_to_service_id,c2_0.car_service_request_number,c2_0.completed_date_time,c2_0.customer_comment,c2_0.received_date_time,c1_0.email,i1_0.customer_id,i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 left join address a1_0 on a1_0.address_id=c1_0.address_id left join car_service_request c2_0 on c1_0.customer_id=c2_0.customer_id left join invoice i1_0 on c1_0.customer_id=i1_0.customer_id where c1_0.address_id=?
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: select s1_0.salesman_id,s1_0.name,s1_0.pesel,s1_0.surname from salesman s1_0 where s1_0.pesel=?
+Hibernate: select c1_0.customer_id,a1_0.address_id,a1_0.address,a1_0.city,a1_0.country,a1_0.postal_code,c2_0.customer_id,c2_0.car_service_request_id,c2_0.car_to_service_id,c2_0.car_service_request_number,c2_0.completed_date_time,c2_0.customer_comment,c2_0.received_date_time,c1_0.email,i1_0.customer_id,i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 left join address a1_0 on a1_0.address_id=c1_0.address_id left join car_service_request c2_0 on c1_0.customer_id=c2_0.customer_id left join invoice i1_0 on c1_0.customer_id=i1_0.customer_id where c1_0.customer_id=?
+Hibernate: insert into invoice (car_to_buy_id, customer_id, date_time, invoice_number, salesman_id) values (?, ?, ?, ?, ?)
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 4
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: insert into car_to_service (brand, model, vin, year) values (?, ?, ?, ?)
+Hibernate: select c1_0.customer_id,c1_0.address_id,c1_0.email,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.email=?
+Hibernate: select a1_0.address_id,a1_0.address,a1_0.city,a1_0.country,a1_0.postal_code from address a1_0 where a1_0.address_id=?
+Hibernate: select c1_0.customer_id,a1_0.address_id,a1_0.address,a1_0.city,a1_0.country,a1_0.postal_code,c2_0.customer_id,c2_0.car_service_request_id,c2_0.car_to_service_id,c2_0.car_service_request_number,c2_0.completed_date_time,c2_0.customer_comment,c2_0.received_date_time,c1_0.email,i1_0.customer_id,i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 left join address a1_0 on a1_0.address_id=c1_0.address_id left join car_service_request c2_0 on c1_0.customer_id=c2_0.customer_id left join invoice i1_0 on c1_0.customer_id=i1_0.customer_id where c1_0.address_id=?
+Hibernate: insert into car_service_request (car_to_service_id, car_service_request_number, completed_date_time, customer_id, customer_comment, received_date_time) values (?, ?, ?, ?, ?, ?)
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_to_buy_id,c1_0.brand,c1_0.color,c1_0.model,c1_0.price,c1_0.vin,c1_0.year from car_to_buy c1_0 where c1_0.vin=?
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0 where i1_0.car_to_buy_id=?
+Hibernate: insert into car_to_service (brand, model, vin, year) values (?, ?, ?, ?)
+Hibernate: select c1_0.customer_id,c1_0.address_id,c1_0.email,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.email=?
+Hibernate: select a1_0.address_id,a1_0.address,a1_0.city,a1_0.country,a1_0.postal_code from address a1_0 where a1_0.address_id=?
+Hibernate: select c1_0.customer_id,a1_0.address_id,a1_0.address,a1_0.city,a1_0.country,a1_0.postal_code,c2_0.customer_id,c2_0.car_service_request_id,c2_0.car_to_service_id,c2_0.car_service_request_number,c2_0.completed_date_time,c2_0.customer_comment,c2_0.received_date_time,c1_0.email,i1_0.customer_id,i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 left join address a1_0 on a1_0.address_id=c1_0.address_id left join car_service_request c2_0 on c1_0.customer_id=c2_0.customer_id left join invoice i1_0 on c1_0.customer_id=i1_0.customer_id where c1_0.address_id=?
+Hibernate: insert into car_service_request (car_to_service_id, car_service_request_number, completed_date_time, customer_id, customer_comment, received_date_time) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into car_to_service (brand, model, vin, year) values (?, ?, ?, ?)
+Hibernate: insert into address (address, city, country, postal_code) values (?, ?, ?, ?)
+Hibernate: insert into customer (address_id, email, name, phone, surname) values (?, ?, ?, ?, ?)
+Hibernate: insert into car_service_request (car_to_service_id, car_service_request_number, completed_date_time, customer_id, customer_comment, received_date_time) values (?, ?, ?, ?, ?, ?)
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 5
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c1_0.completed_date_time is null and c2_0.vin=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c1_0.completed_date_time is null and c2_0.vin=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: update car_service_request set car_to_service_id=?, car_service_request_number=?, completed_date_time=?, customer_id=?, customer_comment=?, received_date_time=? where car_service_request_id=?
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c1_0.completed_date_time is null and c2_0.vin=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c1_0.completed_date_time is null and c2_0.vin=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: select m1_0.mechanic_id,m1_0.name,m1_0.pesel,m1_0.surname from mechanic m1_0 where m1_0.pesel=?
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 where c1_0.vin=?
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0 join car_to_service c2_0 on c2_0.car_to_service_id=c1_0.car_to_service_id where c1_0.completed_date_time is null and c2_0.vin=?
+Hibernate: select s1_0.service_id,s1_0.description,s1_0.price,s1_0.service_code from service s1_0 where s1_0.service_code=?
+Hibernate: select p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number from part p1_0 where p1_0.serial_number=?
+Hibernate: insert into service_part (car_service_request_id, part_id, quantity) values (?, ?, ?)
+Hibernate: insert into service_mechanic (car_service_request_id, comment, hours, mechanic_id, service_id) values (?, ?, ?, ?, ?)
+Hibernate: update car_service_request set car_to_service_id=?, car_service_request_number=?, completed_date_time=?, customer_id=?, customer_comment=?, received_date_time=? where car_service_request_id=?
+INFO  p.z.integration.CarDealershipTest - ### RUNNING ORDER 6
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c2_0.car_to_service_id,c2_0.car_service_request_id,c2_0.car_service_request_number,c2_0.completed_date_time,c2_0.customer_id,c2_0.customer_comment,c2_0.received_date_time,s1_0.car_service_request_id,s1_0.service_mechanic_id,s1_0.comment,s1_0.hours,s1_0.mechanic_id,s2_0.service_id,s2_0.description,s2_0.price,s2_0.service_code,s3_0.car_service_request_id,s3_0.service_part_id,p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number,s3_0.quantity,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 left join car_service_request c2_0 on c1_0.car_to_service_id=c2_0.car_to_service_id left join service_mechanic s1_0 on c2_0.car_service_request_id=s1_0.car_service_request_id left join service s2_0 on s2_0.service_id=s1_0.service_id left join service_part s3_0 on c2_0.car_service_request_id=s3_0.car_service_request_id left join part p1_0 on p1_0.part_id=s3_0.part_id where c1_0.vin=?
+INFO  pl.zajavka.business.CarService - ###CAR HISTORY FOR VIN: [2C3CDYAG2DH731952]
+INFO  pl.zajavka.business.CarService - ###SERVICE REQUEST: [CarHistory.CarServiceRequest(carServiceRequestNumber=2023.4.23-11.0.14.33, receivedDateTime=2023-05-23T11:00:14.677679+02:00, completedDateTime=2023-05-23T11:00:16.026421+02:00, customerComment=Koło mi odpadło)]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service(serviceId=null, serviceCode=58394-014, description=Wymiana koła, price=240.20)]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service(serviceId=null, serviceCode=55319-866, description=Strojenie koła, price=50.20)]
+INFO  pl.zajavka.business.CarService - ###PART: [Part(partId=null, serialNumber=11523-7310, description=Koło, price=320.11)]
+Hibernate: select c1_0.car_to_service_id,c1_0.brand,c2_0.car_to_service_id,c2_0.car_service_request_id,c2_0.car_service_request_number,c2_0.completed_date_time,c2_0.customer_id,c2_0.customer_comment,c2_0.received_date_time,s1_0.car_service_request_id,s1_0.service_mechanic_id,s1_0.comment,s1_0.hours,s1_0.mechanic_id,s2_0.service_id,s2_0.description,s2_0.price,s2_0.service_code,s3_0.car_service_request_id,s3_0.service_part_id,p1_0.part_id,p1_0.description,p1_0.price,p1_0.serial_number,s3_0.quantity,c1_0.model,c1_0.vin,c1_0.year from car_to_service c1_0 left join car_service_request c2_0 on c1_0.car_to_service_id=c2_0.car_to_service_id left join service_mechanic s1_0 on c2_0.car_service_request_id=s1_0.car_service_request_id left join service s2_0 on s2_0.service_id=s1_0.service_id left join service_part s3_0 on c2_0.car_service_request_id=s3_0.car_service_request_id left join part p1_0 on p1_0.part_id=s3_0.part_id where c1_0.vin=?
+INFO  pl.zajavka.business.CarService - ###CAR HISTORY FOR VIN: [1GCEC19X27Z109567]
+INFO  pl.zajavka.business.CarService - ###SERVICE REQUEST: [CarHistory.CarServiceRequest(carServiceRequestNumber=2023.4.23-11.0.15.61, receivedDateTime=2023-05-23T11:00:15.298528+02:00, completedDateTime=2023-05-23T11:00:16.124426+02:00, customerComment=Olej mi cieknie na stopy)]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service(serviceId=null, serviceCode=14222-2022, description=Wymiana filtra paliwa, price=14.98)]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service(serviceId=null, serviceCode=0008-0407, description=Wymiana oleju, price=140.15)]
+INFO  pl.zajavka.business.CarService - ###SERVICE: [Service(serviceId=null, serviceCode=43063-180, description=Wymiana korka do oleju, price=17.19)]
+INFO  pl.zajavka.business.CarService - ###PART: [Part(partId=null, serialNumber=54340-777, description=Olej, price=270.18)]
+INFO  pl.zajavka.business.CarService - ###PART: [Part(partId=null, serialNumber=68180-556, description=Korek do oleju, price=140.15)]
+INFO  pl.zajavka.business.CarService - ###PART: [Part(partId=null, serialNumber=0268-1264, description=Filtr powietrza, price=90.19)]
+Hibernate: select i1_0.invoice_id,i1_0.car_to_buy_id,i1_0.customer_id,i1_0.date_time,i1_0.invoice_number,i1_0.salesman_id from invoice i1_0
+Hibernate: select c1_0.car_service_request_id,c1_0.car_to_service_id,c1_0.car_service_request_number,c1_0.completed_date_time,c1_0.customer_id,c1_0.customer_comment,c1_0.received_date_time from car_service_request c1_0
+Hibernate: select s1_0.service_mechanic_id,s1_0.car_service_request_id,s1_0.comment,s1_0.hours,s1_0.mechanic_id,s1_0.service_id from service_mechanic s1_0
+Hibernate: select s1_0.service_part_id,s1_0.car_service_request_id,s1_0.part_id,s1_0.quantity from service_part s1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

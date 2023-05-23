@@ -4,7 +4,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
-import pl.zajavka.domain.Address;
 import pl.zajavka.domain.CarServiceRequest;
 import pl.zajavka.domain.CarToBuy;
 import pl.zajavka.domain.CarToService;
@@ -16,7 +15,6 @@ import pl.zajavka.domain.Salesman;
 import pl.zajavka.domain.Service;
 import pl.zajavka.domain.ServiceMechanic;
 import pl.zajavka.domain.ServicePart;
-import pl.zajavka.infrastructure.database.entity.AddressEntity;
 import pl.zajavka.infrastructure.database.entity.CarServiceRequestEntity;
 import pl.zajavka.infrastructure.database.entity.CarToBuyEntity;
 import pl.zajavka.infrastructure.database.entity.CarToServiceEntity;
@@ -31,7 +29,7 @@ import pl.zajavka.infrastructure.database.entity.ServicePartEntity;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-05-23T09:00:44+0200",
+    date = "2023-05-23T10:47:08+0200",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
@@ -73,23 +71,6 @@ public class CarServiceRequestEntityMapperImpl implements CarServiceRequestEntit
         carServiceRequestEntity.serviceParts( servicePartSetToServicePartEntitySet( request.getServiceParts() ) );
 
         return carServiceRequestEntity.build();
-    }
-
-    protected AddressEntity addressToAddressEntity(Address address) {
-        if ( address == null ) {
-            return null;
-        }
-
-        AddressEntity.AddressEntityBuilder addressEntity = AddressEntity.builder();
-
-        addressEntity.addressId( address.getAddressId() );
-        addressEntity.country( address.getCountry() );
-        addressEntity.city( address.getCity() );
-        addressEntity.postalCode( address.getPostalCode() );
-        addressEntity.address( address.getAddress() );
-        addressEntity.customer( customerToCustomerEntity( address.getCustomer() ) );
-
-        return addressEntity.build();
     }
 
     protected CarToBuyEntity carToBuyToCarToBuyEntity(CarToBuy carToBuy) {
@@ -157,19 +138,6 @@ public class CarServiceRequestEntityMapperImpl implements CarServiceRequestEntit
         return invoiceEntity.build();
     }
 
-    protected Set<CarServiceRequestEntity> carServiceRequestSetToCarServiceRequestEntitySet(Set<CarServiceRequest> set) {
-        if ( set == null ) {
-            return null;
-        }
-
-        Set<CarServiceRequestEntity> set1 = new LinkedHashSet<CarServiceRequestEntity>( Math.max( (int) ( set.size() / .75f ) + 1, 16 ) );
-        for ( CarServiceRequest carServiceRequest : set ) {
-            set1.add( mapToEntity( carServiceRequest ) );
-        }
-
-        return set1;
-    }
-
     protected CustomerEntity customerToCustomerEntity(Customer customer) {
         if ( customer == null ) {
             return null;
@@ -182,11 +150,22 @@ public class CarServiceRequestEntityMapperImpl implements CarServiceRequestEntit
         customerEntity.surname( customer.getSurname() );
         customerEntity.phone( customer.getPhone() );
         customerEntity.email( customer.getEmail() );
-        customerEntity.address( addressToAddressEntity( customer.getAddress() ) );
         customerEntity.invoices( invoiceSetToInvoiceEntitySet( customer.getInvoices() ) );
-        customerEntity.carServiceRequests( carServiceRequestSetToCarServiceRequestEntitySet( customer.getCarServiceRequests() ) );
 
         return customerEntity.build();
+    }
+
+    protected Set<CarServiceRequestEntity> carServiceRequestSetToCarServiceRequestEntitySet(Set<CarServiceRequest> set) {
+        if ( set == null ) {
+            return null;
+        }
+
+        Set<CarServiceRequestEntity> set1 = new LinkedHashSet<CarServiceRequestEntity>( Math.max( (int) ( set.size() / .75f ) + 1, 16 ) );
+        for ( CarServiceRequest carServiceRequest : set ) {
+            set1.add( mapToEntity( carServiceRequest ) );
+        }
+
+        return set1;
     }
 
     protected CarToServiceEntity carToServiceToCarToServiceEntity(CarToService carToService) {

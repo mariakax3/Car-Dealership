@@ -31,7 +31,7 @@ import pl.zajavka.infrastructure.database.entity.ServicePartEntity;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-05-23T09:00:44+0200",
+    date = "2023-05-23T10:47:08+0200",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
@@ -45,16 +45,31 @@ public class CustomerEntityMapperImpl implements CustomerEntityMapper {
 
         Customer.CustomerBuilder customer = Customer.builder();
 
+        customer.invoices( mapInvoices( entity.getInvoices() ) );
         customer.customerId( entity.getCustomerId() );
         customer.name( entity.getName() );
         customer.surname( entity.getSurname() );
         customer.phone( entity.getPhone() );
         customer.email( entity.getEmail() );
         customer.address( addressEntityToAddress( entity.getAddress() ) );
-        customer.invoices( invoiceEntitySetToInvoiceSet( entity.getInvoices() ) );
         customer.carServiceRequests( carServiceRequestEntitySetToCarServiceRequestSet( entity.getCarServiceRequests() ) );
 
         return customer.build();
+    }
+
+    @Override
+    public Invoice mapFromEntity(InvoiceEntity entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        Invoice.InvoiceBuilder invoice = Invoice.builder();
+
+        invoice.invoiceId( entity.getInvoiceId() );
+        invoice.invoiceNumber( entity.getInvoiceNumber() );
+        invoice.dateTime( entity.getDateTime() );
+
+        return invoice.build();
     }
 
     @Override
@@ -72,7 +87,6 @@ public class CustomerEntityMapperImpl implements CustomerEntityMapper {
         customerEntity.email( customer.getEmail() );
         customerEntity.address( addressToAddressEntity( customer.getAddress() ) );
         customerEntity.invoices( invoiceSetToInvoiceEntitySet( customer.getInvoices() ) );
-        customerEntity.carServiceRequests( carServiceRequestSetToCarServiceRequestEntitySet( customer.getCarServiceRequests() ) );
 
         return customerEntity.build();
     }
@@ -89,74 +103,8 @@ public class CustomerEntityMapperImpl implements CustomerEntityMapper {
         address.city( addressEntity.getCity() );
         address.postalCode( addressEntity.getPostalCode() );
         address.address( addressEntity.getAddress() );
-        address.customer( mapFromEntity( addressEntity.getCustomer() ) );
 
         return address.build();
-    }
-
-    protected CarToBuy carToBuyEntityToCarToBuy(CarToBuyEntity carToBuyEntity) {
-        if ( carToBuyEntity == null ) {
-            return null;
-        }
-
-        CarToBuy.CarToBuyBuilder carToBuy = CarToBuy.builder();
-
-        carToBuy.carToBuyId( carToBuyEntity.getCarToBuyId() );
-        carToBuy.vin( carToBuyEntity.getVin() );
-        carToBuy.brand( carToBuyEntity.getBrand() );
-        carToBuy.model( carToBuyEntity.getModel() );
-        carToBuy.year( carToBuyEntity.getYear() );
-        carToBuy.color( carToBuyEntity.getColor() );
-        carToBuy.price( carToBuyEntity.getPrice() );
-        carToBuy.invoice( invoiceEntityToInvoice( carToBuyEntity.getInvoice() ) );
-
-        return carToBuy.build();
-    }
-
-    protected Set<Invoice> invoiceEntitySetToInvoiceSet(Set<InvoiceEntity> set) {
-        if ( set == null ) {
-            return null;
-        }
-
-        Set<Invoice> set1 = new LinkedHashSet<Invoice>( Math.max( (int) ( set.size() / .75f ) + 1, 16 ) );
-        for ( InvoiceEntity invoiceEntity : set ) {
-            set1.add( invoiceEntityToInvoice( invoiceEntity ) );
-        }
-
-        return set1;
-    }
-
-    protected Salesman salesmanEntityToSalesman(SalesmanEntity salesmanEntity) {
-        if ( salesmanEntity == null ) {
-            return null;
-        }
-
-        Salesman.SalesmanBuilder salesman = Salesman.builder();
-
-        salesman.salesmanId( salesmanEntity.getSalesmanId() );
-        salesman.name( salesmanEntity.getName() );
-        salesman.surname( salesmanEntity.getSurname() );
-        salesman.pesel( salesmanEntity.getPesel() );
-        salesman.invoices( invoiceEntitySetToInvoiceSet( salesmanEntity.getInvoices() ) );
-
-        return salesman.build();
-    }
-
-    protected Invoice invoiceEntityToInvoice(InvoiceEntity invoiceEntity) {
-        if ( invoiceEntity == null ) {
-            return null;
-        }
-
-        Invoice.InvoiceBuilder invoice = Invoice.builder();
-
-        invoice.invoiceId( invoiceEntity.getInvoiceId() );
-        invoice.invoiceNumber( invoiceEntity.getInvoiceNumber() );
-        invoice.dateTime( invoiceEntity.getDateTime() );
-        invoice.car( carToBuyEntityToCarToBuy( invoiceEntity.getCar() ) );
-        invoice.customer( mapFromEntity( invoiceEntity.getCustomer() ) );
-        invoice.salesman( salesmanEntityToSalesman( invoiceEntity.getSalesman() ) );
-
-        return invoice.build();
     }
 
     protected Set<CarServiceRequest> carServiceRequestEntitySetToCarServiceRequestSet(Set<CarServiceRequestEntity> set) {
@@ -395,161 +343,5 @@ public class CustomerEntityMapperImpl implements CustomerEntityMapper {
         invoiceEntity.salesman( salesmanToSalesmanEntity( invoice.getSalesman() ) );
 
         return invoiceEntity.build();
-    }
-
-    protected Set<CarServiceRequestEntity> carServiceRequestSetToCarServiceRequestEntitySet(Set<CarServiceRequest> set) {
-        if ( set == null ) {
-            return null;
-        }
-
-        Set<CarServiceRequestEntity> set1 = new LinkedHashSet<CarServiceRequestEntity>( Math.max( (int) ( set.size() / .75f ) + 1, 16 ) );
-        for ( CarServiceRequest carServiceRequest : set ) {
-            set1.add( carServiceRequestToCarServiceRequestEntity( carServiceRequest ) );
-        }
-
-        return set1;
-    }
-
-    protected CarToServiceEntity carToServiceToCarToServiceEntity(CarToService carToService) {
-        if ( carToService == null ) {
-            return null;
-        }
-
-        CarToServiceEntity.CarToServiceEntityBuilder carToServiceEntity = CarToServiceEntity.builder();
-
-        carToServiceEntity.carToServiceId( carToService.getCarToServiceId() );
-        carToServiceEntity.vin( carToService.getVin() );
-        carToServiceEntity.brand( carToService.getBrand() );
-        carToServiceEntity.model( carToService.getModel() );
-        carToServiceEntity.year( carToService.getYear() );
-        carToServiceEntity.carServiceRequests( carServiceRequestSetToCarServiceRequestEntitySet( carToService.getCarServiceRequests() ) );
-
-        return carToServiceEntity.build();
-    }
-
-    protected Set<ServiceMechanicEntity> serviceMechanicSetToServiceMechanicEntitySet(Set<ServiceMechanic> set) {
-        if ( set == null ) {
-            return null;
-        }
-
-        Set<ServiceMechanicEntity> set1 = new LinkedHashSet<ServiceMechanicEntity>( Math.max( (int) ( set.size() / .75f ) + 1, 16 ) );
-        for ( ServiceMechanic serviceMechanic : set ) {
-            set1.add( serviceMechanicToServiceMechanicEntity( serviceMechanic ) );
-        }
-
-        return set1;
-    }
-
-    protected MechanicEntity mechanicToMechanicEntity(Mechanic mechanic) {
-        if ( mechanic == null ) {
-            return null;
-        }
-
-        MechanicEntity.MechanicEntityBuilder mechanicEntity = MechanicEntity.builder();
-
-        mechanicEntity.mechanicId( mechanic.getMechanicId() );
-        mechanicEntity.name( mechanic.getName() );
-        mechanicEntity.surname( mechanic.getSurname() );
-        mechanicEntity.pesel( mechanic.getPesel() );
-        mechanicEntity.serviceMechanics( serviceMechanicSetToServiceMechanicEntitySet( mechanic.getServiceMechanics() ) );
-
-        return mechanicEntity.build();
-    }
-
-    protected ServiceEntity serviceToServiceEntity(Service service) {
-        if ( service == null ) {
-            return null;
-        }
-
-        ServiceEntity.ServiceEntityBuilder serviceEntity = ServiceEntity.builder();
-
-        serviceEntity.serviceId( service.getServiceId() );
-        serviceEntity.serviceCode( service.getServiceCode() );
-        serviceEntity.description( service.getDescription() );
-        serviceEntity.price( service.getPrice() );
-        serviceEntity.serviceMechanics( serviceMechanicSetToServiceMechanicEntitySet( service.getServiceMechanics() ) );
-
-        return serviceEntity.build();
-    }
-
-    protected ServiceMechanicEntity serviceMechanicToServiceMechanicEntity(ServiceMechanic serviceMechanic) {
-        if ( serviceMechanic == null ) {
-            return null;
-        }
-
-        ServiceMechanicEntity.ServiceMechanicEntityBuilder serviceMechanicEntity = ServiceMechanicEntity.builder();
-
-        serviceMechanicEntity.serviceMechanicId( serviceMechanic.getServiceMechanicId() );
-        serviceMechanicEntity.hours( serviceMechanic.getHours() );
-        serviceMechanicEntity.comment( serviceMechanic.getComment() );
-        serviceMechanicEntity.carServiceRequest( carServiceRequestToCarServiceRequestEntity( serviceMechanic.getCarServiceRequest() ) );
-        serviceMechanicEntity.mechanic( mechanicToMechanicEntity( serviceMechanic.getMechanic() ) );
-        serviceMechanicEntity.service( serviceToServiceEntity( serviceMechanic.getService() ) );
-
-        return serviceMechanicEntity.build();
-    }
-
-    protected Set<ServicePartEntity> servicePartSetToServicePartEntitySet(Set<ServicePart> set) {
-        if ( set == null ) {
-            return null;
-        }
-
-        Set<ServicePartEntity> set1 = new LinkedHashSet<ServicePartEntity>( Math.max( (int) ( set.size() / .75f ) + 1, 16 ) );
-        for ( ServicePart servicePart : set ) {
-            set1.add( servicePartToServicePartEntity( servicePart ) );
-        }
-
-        return set1;
-    }
-
-    protected PartEntity partToPartEntity(Part part) {
-        if ( part == null ) {
-            return null;
-        }
-
-        PartEntity.PartEntityBuilder partEntity = PartEntity.builder();
-
-        partEntity.partId( part.getPartId() );
-        partEntity.serialNumber( part.getSerialNumber() );
-        partEntity.description( part.getDescription() );
-        partEntity.price( part.getPrice() );
-        partEntity.serviceParts( servicePartSetToServicePartEntitySet( part.getServiceParts() ) );
-
-        return partEntity.build();
-    }
-
-    protected ServicePartEntity servicePartToServicePartEntity(ServicePart servicePart) {
-        if ( servicePart == null ) {
-            return null;
-        }
-
-        ServicePartEntity.ServicePartEntityBuilder servicePartEntity = ServicePartEntity.builder();
-
-        servicePartEntity.servicePartId( servicePart.getServicePartId() );
-        servicePartEntity.quantity( servicePart.getQuantity() );
-        servicePartEntity.carServiceRequest( carServiceRequestToCarServiceRequestEntity( servicePart.getCarServiceRequest() ) );
-        servicePartEntity.part( partToPartEntity( servicePart.getPart() ) );
-
-        return servicePartEntity.build();
-    }
-
-    protected CarServiceRequestEntity carServiceRequestToCarServiceRequestEntity(CarServiceRequest carServiceRequest) {
-        if ( carServiceRequest == null ) {
-            return null;
-        }
-
-        CarServiceRequestEntity.CarServiceRequestEntityBuilder carServiceRequestEntity = CarServiceRequestEntity.builder();
-
-        carServiceRequestEntity.carServiceRequestId( carServiceRequest.getCarServiceRequestId() );
-        carServiceRequestEntity.carServiceRequestNumber( carServiceRequest.getCarServiceRequestNumber() );
-        carServiceRequestEntity.receivedDateTime( carServiceRequest.getReceivedDateTime() );
-        carServiceRequestEntity.completedDateTime( carServiceRequest.getCompletedDateTime() );
-        carServiceRequestEntity.customerComment( carServiceRequest.getCustomerComment() );
-        carServiceRequestEntity.customer( mapToEntity( carServiceRequest.getCustomer() ) );
-        carServiceRequestEntity.car( carToServiceToCarToServiceEntity( carServiceRequest.getCar() ) );
-        carServiceRequestEntity.serviceMechanics( serviceMechanicSetToServiceMechanicEntitySet( carServiceRequest.getServiceMechanics() ) );
-        carServiceRequestEntity.serviceParts( servicePartSetToServicePartEntitySet( carServiceRequest.getServiceParts() ) );
-
-        return carServiceRequestEntity.build();
     }
 }
