@@ -19,7 +19,7 @@ public class CarToService {
     Integer year;
     Set<CarServiceRequest> carServiceRequests;
 
-    public boolean carBoughtHere() {
+    public boolean shouldExistInCarToBuy() {
         return Objects.nonNull(vin)
                 && Objects.isNull(brand)
                 && Objects.isNull(model)

@@ -31,62 +31,62 @@ import pl.zajavka.infrastructure.database.entity.ServicePartEntity;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-03T22:50:50+0200",
+    date = "2023-06-05T21:46:46+0200",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
 public class CustomerEntityMapperImpl implements CustomerEntityMapper {
 
     @Override
-    public Customer mapFromEntity(CustomerEntity entity) {
-        if ( entity == null ) {
+    public Customer mapFromEntity(CustomerEntity arg0) {
+        if ( arg0 == null ) {
             return null;
         }
 
         Customer.CustomerBuilder customer = Customer.builder();
 
-        customer.invoices( mapInvoices( entity.getInvoices() ) );
-        customer.customerId( entity.getCustomerId() );
-        customer.name( entity.getName() );
-        customer.surname( entity.getSurname() );
-        customer.phone( entity.getPhone() );
-        customer.email( entity.getEmail() );
-        customer.address( addressEntityToAddress( entity.getAddress() ) );
-        customer.carServiceRequests( carServiceRequestEntitySetToCarServiceRequestSet( entity.getCarServiceRequests() ) );
+        customer.invoices( mapInvoices( arg0.getInvoices() ) );
+        customer.customerId( arg0.getCustomerId() );
+        customer.name( arg0.getName() );
+        customer.surname( arg0.getSurname() );
+        customer.phone( arg0.getPhone() );
+        customer.email( arg0.getEmail() );
+        customer.address( addressEntityToAddress( arg0.getAddress() ) );
+        customer.carServiceRequests( carServiceRequestEntitySetToCarServiceRequestSet( arg0.getCarServiceRequests() ) );
 
         return customer.build();
     }
 
     @Override
-    public Invoice mapFromEntity(InvoiceEntity entity) {
-        if ( entity == null ) {
+    public Invoice mapFromEntity(InvoiceEntity arg0) {
+        if ( arg0 == null ) {
             return null;
         }
 
         Invoice.InvoiceBuilder invoice = Invoice.builder();
 
-        invoice.invoiceId( entity.getInvoiceId() );
-        invoice.invoiceNumber( entity.getInvoiceNumber() );
-        invoice.dateTime( entity.getDateTime() );
+        invoice.invoiceId( arg0.getInvoiceId() );
+        invoice.invoiceNumber( arg0.getInvoiceNumber() );
+        invoice.dateTime( arg0.getDateTime() );
 
         return invoice.build();
     }
 
     @Override
-    public CustomerEntity mapToEntity(Customer customer) {
-        if ( customer == null ) {
+    public CustomerEntity mapToEntity(Customer arg0) {
+        if ( arg0 == null ) {
             return null;
         }
 
         CustomerEntity.CustomerEntityBuilder customerEntity = CustomerEntity.builder();
 
-        customerEntity.customerId( customer.getCustomerId() );
-        customerEntity.name( customer.getName() );
-        customerEntity.surname( customer.getSurname() );
-        customerEntity.phone( customer.getPhone() );
-        customerEntity.email( customer.getEmail() );
-        customerEntity.address( addressToAddressEntity( customer.getAddress() ) );
-        customerEntity.invoices( invoiceSetToInvoiceEntitySet( customer.getInvoices() ) );
+        customerEntity.customerId( arg0.getCustomerId() );
+        customerEntity.name( arg0.getName() );
+        customerEntity.surname( arg0.getSurname() );
+        customerEntity.phone( arg0.getPhone() );
+        customerEntity.email( arg0.getEmail() );
+        customerEntity.address( addressToAddressEntity( arg0.getAddress() ) );
+        customerEntity.invoices( invoiceSetToInvoiceEntitySet( arg0.getInvoices() ) );
 
         return customerEntity.build();
     }
