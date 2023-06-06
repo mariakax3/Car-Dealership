@@ -9,5 +9,5 @@ The project is being developed by several workshops. the target effect is to use
 
 ### ERD
 ```
-![Entity-Relationship Diagram](https://github.com/mariakax3/Car-Dealership/blob/main/car_dealership_erd_diagram.png?raw=true)
+![Entity-Relationship Diagram](./car_dealership_erd_diagram.png?raw=true)
 ```
