@@ -6,8 +6,3 @@ Zajavka Car Dealership is a project implemented on the path of Zajavka workshops
 
 ### Tech stack
 The project is being developed by several workshops. the target effect is to use Spring Boot and Rest API. The architecture of the project is MVC, the views are realized with the help of Thymeleaf. Database entities are mapped using Hibernate. Database entities are mapped using Hibernate. To ensure mapping of Java Beans from entity to DTO and vice versa, MapStruct was used.
-
-### ERD
-```
-![Entity-Relationship Diagram](https://github.com/mariakax3/Car-Dealership/tree/main/car_dealership_erd_diagram.png?raw=true)
-```
