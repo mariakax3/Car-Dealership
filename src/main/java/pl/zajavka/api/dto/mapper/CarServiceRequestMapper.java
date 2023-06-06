@@ -3,10 +3,9 @@ package pl.zajavka.api.dto.mapper;
 import org.mapstruct.Mapper;
 import org.springframework.stereotype.Component;
 import pl.zajavka.api.dto.CarServiceCustomerRequestDTO;
-import pl.zajavka.domain.Address;
-import pl.zajavka.domain.CarServiceRequest;
-import pl.zajavka.domain.CarToService;
-import pl.zajavka.domain.Customer;
+import pl.zajavka.api.dto.CarServiceMechanicProcessingUnitDTO;
+import pl.zajavka.api.dto.CarServiceRequestDTO;
+import pl.zajavka.domain.*;
 
 @Component
 @Mapper(componentModel = "spring")
@@ -47,4 +46,8 @@ public interface CarServiceRequestMapper {
                     .build();
         }
     }
+
+    CarServiceRequestDTO map(CarServiceRequest request);
+
+    CarServiceProcessingRequest map(CarServiceMechanicProcessingUnitDTO dto);
 }
