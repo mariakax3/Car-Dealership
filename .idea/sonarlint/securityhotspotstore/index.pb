@@ -61,12 +61,8 @@ k
 ;src/main/java/pl/zajavka/api/dto/mapper/SalesmanMapper.java,d\c\dcd9bdac8c6168403663fa782f122d933e2f9c94
 [
 +src/main/webapp/WEB-INF/templates/home.html,b\6\b6ee712d09490d168097dfc1846c3b8b90a5fef5
-f
-6src/main/webapp/WEB-INF/templates/salesman_portal.html,f\8\f871cc1d6bff54f4de1aeae269eedd97cda588d8
 n
 >src/main/java/pl/zajavka/api/dto/mapper/CarPurchaseMapper.java,6\d\6deceea6f4adf25e46167f41623613c8efbe96b4
-]
--src/main/java/pl/zajavka/domain/Customer.java,8\8\88ec8e64a261e703604596757c5cbc77f2cd53e0
 i
 9src/main/java/pl/zajavka/business/CarPurchaseService.java,d\0\d0a71c34c179ebcbb0032979a6af940ac4001cfd
 g
@@ -75,8 +71,6 @@ h
 8src/main/webapp/WEB-INF/templates/car_purchase_done.html,8\b\8b4d41738a011c5881539330e605fe39304800e5
 o
 ?src/main/java/pl/zajavka/api/controller/SalesmanController.java,4\b\4b845c3abadd6f7d1f1da3be3244b333e6f58f6a
-t
-Dsrc/main/java/pl/zajavka/api/dto/mapper/CarServiceRequestMapper.java,a\8\a8fea9f034a074c1230716da6e8b2eb4bae8d89c
 j
 :src/main/java/pl/zajavka/api/dto/mapper/ServiceMapper.java,9\7\9770e87f30dc7d15d344ee21b42bfa83527d11f2
 g
@@ -87,9 +81,5 @@ a
 1src/main/java/pl/zajavka/business/CarService.java,9\2\9251a2dcfd4b761b00db134b59682f4890eb2e2c
 r
 Bsrc/main/java/pl/zajavka/business/CarServiceProcessingService.java,e\9\e982b4461b15597c561c8b80dd93f2267f2e6e0b
-p
-@src/main/java/pl/zajavka/domain/CarServiceProcessingRequest.java,7\0\70615d6fd33307fca48b0ce6b5a3ee23c14027df
 Y
 )src/main/java/pl/zajavka/domain/Part.java,6\8\68711d3b829c3a89576ac89cc6f7282c9026a85f
-o
-?src/main/java/pl/zajavka/api/controller/MechanicController.java,b\8\b83b23f474c1cac2ead447b0bc0524de3bbb15cb

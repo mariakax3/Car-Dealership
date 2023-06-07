@@ -31,26 +31,26 @@ import pl.zajavka.infrastructure.database.entity.ServicePartEntity;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-05T21:46:46+0200",
+    date = "2023-06-06T23:12:12+0200",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
 public class InvoiceEntityMapperImpl implements InvoiceEntityMapper {
 
     @Override
-    public InvoiceEntity mapToEntity(Invoice arg0) {
-        if ( arg0 == null ) {
+    public InvoiceEntity mapToEntity(Invoice invoice) {
+        if ( invoice == null ) {
             return null;
         }
 
         InvoiceEntity.InvoiceEntityBuilder invoiceEntity = InvoiceEntity.builder();
 
-        invoiceEntity.invoiceId( arg0.getInvoiceId() );
-        invoiceEntity.invoiceNumber( arg0.getInvoiceNumber() );
-        invoiceEntity.dateTime( arg0.getDateTime() );
-        invoiceEntity.car( carToBuyToCarToBuyEntity( arg0.getCar() ) );
-        invoiceEntity.customer( customerToCustomerEntity( arg0.getCustomer() ) );
-        invoiceEntity.salesman( salesmanToSalesmanEntity( arg0.getSalesman() ) );
+        invoiceEntity.invoiceId( invoice.getInvoiceId() );
+        invoiceEntity.invoiceNumber( invoice.getInvoiceNumber() );
+        invoiceEntity.dateTime( invoice.getDateTime() );
+        invoiceEntity.car( carToBuyToCarToBuyEntity( invoice.getCar() ) );
+        invoiceEntity.customer( customerToCustomerEntity( invoice.getCustomer() ) );
+        invoiceEntity.salesman( salesmanToSalesmanEntity( invoice.getSalesman() ) );
 
         return invoiceEntity.build();
     }
