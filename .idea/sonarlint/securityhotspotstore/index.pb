@@ -1,8 +1,6 @@
 
 \
 ,src/main/java/pl/zajavka/domain/Address.java,c\f\cfdc32d7ead21f7d428cf32c5e8854cb8668da8d
-_
-/src/main/java/pl/zajavka/domain/CarHistory.java,6\8\683143ee2873627417c2db20739c85bac2ea4bde
 \
 ,src/main/java/pl/zajavka/domain/Invoice.java,a\0\a03651caf462f5ec53fff050ac03beba54519508
 ]
@@ -77,8 +75,6 @@ g
 7src/main/java/pl/zajavka/api/dto/mapper/PartMapper.java,6\d\6da897fd24ba8b485b8437d123f057bf6bfc7144
 o
 ?src/main/java/pl/zajavka/business/CarServiceRequestService.java,0\4\040bfb0a56bd01d63da5a89fcd0e632ad471296f
-a
-1src/main/java/pl/zajavka/business/CarService.java,9\2\9251a2dcfd4b761b00db134b59682f4890eb2e2c
 r
 Bsrc/main/java/pl/zajavka/business/CarServiceProcessingService.java,e\9\e982b4461b15597c561c8b80dd93f2267f2e6e0b
 Y
