@@ -15,12 +15,8 @@ d
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 ‡
 Wsrc/main/java/pl/zajavka/infrastructure/configuration/ServletDispatcherInitializer.java,5\c\5c25622af1abb2b4d24e88f326a31fe95db6f109
-k
-;src/main/java/pl/zajavka/api/controller/HomeController.java,8\a\8a202c6e1e7a551f74359badcee3d68dcebe359a
 f
 6src/main/java/pl/zajavka/business/dao/CarToBuyDAO.java,f\4\f46046e325233c9dfaf6b24afb9475f01ad3ad43
-{
-Ksrc/main/java/pl/zajavka/infrastructure/database/entity/CarToBuyEntity.java,5\6\56acebfaa9dceaff5b3247c6cd0ec90bfa380224
 Š
 Zsrc/main/java/pl/zajavka/infrastructure/database/repository/jpa/CarToBuyJpaRepository.java,7\0\70e751e3e9a459e8955b64a7583cc921e2acc17b
 ]

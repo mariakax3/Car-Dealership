@@ -9,7 +9,7 @@ INSERT INTO MECHANIC (name, surname, pesel) VALUES
 ('Zygmunt', 'Naprawa', '83011863727'),
 ('Remigiusz', 'Alufelga', '67111396321');
 
-INSERT INTO CAR_TO_BUY (vin, brand, model, year, color, price) VALUES
+INSERT INTO CAR_TO_BUY (vin, brand, model, production_year, color, price) VALUES
 ('1FT7X2B60FEA74019', 'BMW', 'Series 1', 2020, 'black', 20000),
 ('1N6BD06T45C416702', 'BMW', 'Series 3', 2020, 'black', 30000),
 ('1G1PE5S97B7239380', 'BMW', 'Series 3', 2020, 'black', 30000),

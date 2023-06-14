@@ -7,7 +7,6 @@ import pl.zajavka.business.dao.ServiceDAO;
 import pl.zajavka.domain.Service;
 import pl.zajavka.domain.exception.NotFoundException;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
