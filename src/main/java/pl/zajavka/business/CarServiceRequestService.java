@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.zajavka.business.dao.CarServiceRequestDAO;
 import pl.zajavka.domain.*;
+import pl.zajavka.domain.exception.NotFoundException;
 import pl.zajavka.domain.exception.ProcessingException;
 
 import java.time.OffsetDateTime;
@@ -113,10 +114,10 @@ public class CarServiceRequestService {
     public CarServiceRequest findAnyActiveServiceRequest(String carVin) {
         Set<CarServiceRequest> serviceRequests = carServiceRequestDAO.findActiveServiceRequestsByCarVin(carVin);
         if (serviceRequests.size() != 1) {
-            throw new RuntimeException("There should be only one active service request at a time, cat vin: [%s]".formatted(carVin));
+            throw new NotFoundException("There should be only one active service request at a time, cat vin: [%s]".formatted(carVin));
         }
         return serviceRequests.stream()
                 .findAny()
-                .orElseThrow(() -> new RuntimeException("Could not find eny service requests, car vin: [%s]".formatted(carVin)));
+                .orElseThrow(() -> new NotFoundException("Could not find eny service requests, car vin: [%s]".formatted(carVin)));
     }
 }

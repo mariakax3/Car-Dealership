@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;
 import pl.zajavka.business.dao.ServiceDAO;
 import pl.zajavka.domain.Service;
+import pl.zajavka.domain.exception.NotFoundException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +22,7 @@ public class ServiceCatalogService {
     public Service findService(String serviceCode) {
         Optional<Service> service = serviceDAO.findByServiceCode(serviceCode);
         if (service.isEmpty()) {
-            throw new RuntimeException("Could not find service by service code: [%s]".formatted(serviceCode));
+            throw new NotFoundException("Could not find service by service code: [%s]".formatted(serviceCode));
         }
         return service.get();
     }
