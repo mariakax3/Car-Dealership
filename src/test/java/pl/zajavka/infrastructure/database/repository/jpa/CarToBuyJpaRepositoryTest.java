@@ -1,4 +1,4 @@
-package pl.zajavka.api.infrastructure.database.repository.jpa;
+package pl.zajavka.infrastructure.database.repository.jpa;
 
 import lombok.AllArgsConstructor;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,6 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.TestPropertySource;
 import pl.zajavka.infrastructure.database.entity.CarToBuyEntity;
-import pl.zajavka.infrastructure.database.repository.jpa.CarToBuyJpaRepository;
 
 import java.util.List;
 

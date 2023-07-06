@@ -99,8 +99,6 @@ f
 6src/main/java/pl/zajavka/CarDealershipApplication.java,0\2\02c66cae2c104a6a5797e98f7029baafe6dbc4b3
 k
 ;src/main/java/pl/zajavka/api/controller/HomeController.java,8\a\8a202c6e1e7a551f74359badcee3d68dcebe359a
-d
-4src/main/java/pl/zajavka/api/dto/CarPurchaseDTO.java,2\a\2a765ea805d024c9499f2d6baf0af5dfcb213031
 a
 1src/test/java/pl/zajavka/util/EntityFixtures.java,5\c\5cf207feee67838bac089e9783497036eaadf84b
 {
