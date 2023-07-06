@@ -7,7 +7,7 @@ import pl.zajavka.domain.Service;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-06T08:09:39+0200",
+    date = "2023-07-06T20:11:17+0200",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component

@@ -26,12 +26,12 @@ public class MechanicRestController {
     private final CarServiceProcessingService carServiceProcessingService;
     private final CarServiceRequestMapper carServiceRequestMapper;
 
-    @GetMapping(value = AVAILABLE_SERVICE_REQUESTS)
+    @GetMapping(AVAILABLE_SERVICE_REQUESTS)
     public CarServiceRequestsDTO availableServiceRequests() {
         return getCarServiceRequestsDTO();
     }
 
-    @PostMapping(value = MECHANIC_WORK_UNIT)
+    @PostMapping(MECHANIC_WORK_UNIT)
     public CarServiceRequestsDTO mechanicPerformWorkUnit(
             @Valid @RequestBody CarServiceMechanicProcessingUnitDTO processingUnitDTO
     ) {
