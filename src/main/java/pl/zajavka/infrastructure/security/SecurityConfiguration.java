@@ -59,6 +59,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/mechanic/**").hasAnyAuthority("MECHANIC")
                         .requestMatchers("/salesman/**", "/purchase/**", "/service/**").hasAnyAuthority("SALESMAN")
                         .requestMatchers("/", "/car/**", "/images/**").hasAnyAuthority("MECHANIC", "SALESMAN")
+                        .requestMatchers("/api/**").hasAnyAuthority("REST_API")
                 )
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .logout(logout -> logout

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.zajavka.integration.configuration.MechanicControllerIT" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-07-05T17:58:38" hostname="LAPTOP-O9433SLL" time="0.246">
+  <properties/>
+  <testcase name="homePageWorksCorrectly()" classname="pl.zajavka.integration.configuration.MechanicControllerIT" time="0.246"/>
+  <system-out><![CDATA[[http-nio-auto-1-exec-5] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/mechanic':
+
+org.apache.catalina.connector.RequestFacade@71e48fde
+
+servletPath:/mechanic
+pathInfo:null
+headers: 
+accept: text/plain, application/json, application/*+json, */*
+user-agent: Java/17.0.1
+host: localhost:49657
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-5] INFO  pl.zajavka.business.MechanicService - Available mechanics: [3]
+[http-nio-auto-1-exec-5] INFO  p.z.business.PartCatalogService - Available parts: [[Part(partId=1, serialNumber=11523-7310, description=Koło, price=320.11), Part(partId=2, serialNumber=54340-777, description=Olej, price=270.18), Part(partId=3, serialNumber=68180-556, description=Korek do oleju, price=140.15), Part(partId=4, serialNumber=0268-1264, description=Filtr powietrza, price=90.19)]]
+[http-nio-auto-1-exec-5] INFO  p.z.business.ServiceCatalogService - Available services: [[Service(serviceId=1, serviceCode=58394-014, description=Wymiana koła, price=240.20), Service(serviceId=2, serviceCode=55319-866, description=Strojenie koła, price=50.20), Service(serviceId=3, serviceCode=0008-0407, description=Wymiana oleju, price=140.15), Service(serviceId=4, serviceCode=43063-180, description=Wymiana korka do oleju, price=17.19), Service(serviceId=5, serviceCode=14222-2022, description=Wymiana filtra paliwa, price=14.98)]]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
