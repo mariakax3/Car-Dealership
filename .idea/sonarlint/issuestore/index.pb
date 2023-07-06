@@ -105,12 +105,8 @@ a
 Ksrc/main/java/pl/zajavka/infrastructure/database/entity/CarToBuyEntity.java,5\6\56acebfaa9dceaff5b3247c6cd0ec90bfa380224
 
 Osrc/main/java/pl/zajavka/infrastructure/database/entity/CarToServiceEntity.java,0\7\074325efc5df40e9b14bf5bd3f8b27fb453d63fe
-r
-Bsrc/test/java/pl/zajavka/integration/configuration/AbstractIT.java,f\5\f55d837df4cc42956bf94576ec7e9d1d38fe5727
 x
 Hsrc/test/java/pl/zajavka/integration/configuration/HomeControllerIT.java,3\4\34ab973764b52b0283da2d008591baffaea07cd3
-|
-Lsrc/test/java/pl/zajavka/integration/configuration/MechanicControllerIT.java,8\7\87aa9ca1ce6d9a70fb2c6e294195067bdaae5fec
 t
 Dsrc/main/java/pl/zajavka/infrastructure/security/RoleRepository.java,3\3\3367e7ad5c0a69a7012e489e927a48fd315d76c2
 t
