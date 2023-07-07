@@ -20,13 +20,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">53</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -38,7 +38,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">8.170s</div>
+<div class="counter">14.809s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,8 +47,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">96%</div>
 <p>successful</p>
 </div>
 </td>
@@ -58,13 +58,29 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Packages</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Classes</a>
+<a href="#tab1">Packages</a>
+</li>
+<li>
+<a href="#tab2">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/pl.zajavka.infrastructure.database.repository.jpa.CarToBuyJpaRepositoryTest.html">CarToBuyJpaRepositoryTest</a>.
+<a href="classes/pl.zajavka.infrastructure.database.repository.jpa.CarToBuyJpaRepositoryTest.html#thatCarBeSavedCorrectly()">thatCarBeSavedCorrectly()</a>
+</li>
+<li>
+<a href="classes/pl.zajavka.integration.rest.PurchaseIT.html">PurchaseIT</a>.
+<a href="classes/pl.zajavka.integration.rest.PurchaseIT.html#thatCarPurchaseWorksCorrectly()">thatCarPurchaseWorksCorrectly()</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -80,18 +96,58 @@
 <tbody>
 <tr>
 <td class="success">
-<a href="packages/pl.zajavka.integration.rest.html">pl.zajavka.integration.rest</a>
+<a href="packages/pl.zajavka.api.controller.html">pl.zajavka.api.controller</a>
+</td>
+<td>23</td>
+<td>0</td>
+<td>0</td>
+<td>3.505s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/pl.zajavka.api.controller.rest.html">pl.zajavka.api.controller.rest</a>
+</td>
+<td>23</td>
+<td>0</td>
+<td>0</td>
+<td>0.843s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="packages/pl.zajavka.infrastructure.database.repository.jpa.html">pl.zajavka.infrastructure.database.repository.jpa</a>
+</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0.445s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/pl.zajavka.integration.html">pl.zajavka.integration</a>
 </td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
-<td>8.170s</td>
+<td>0.356s</td>
 <td class="success">100%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="packages/pl.zajavka.integration.rest.html">pl.zajavka.integration.rest</a>
+</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>9.660s</td>
+<td class="failures">75%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -107,13 +163,83 @@
 <tbody>
 <tr>
 <td class="success">
+<a href="classes/pl.zajavka.api.controller.HomeControllerWebMvcTest.html">pl.zajavka.api.controller.HomeControllerWebMvcTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2.530s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/pl.zajavka.api.controller.PurchaseControllerWebMvcTest.html">pl.zajavka.api.controller.PurchaseControllerWebMvcTest</a>
+</td>
+<td>22</td>
+<td>0</td>
+<td>0</td>
+<td>0.975s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/pl.zajavka.api.controller.rest.CepikRestControllerTest.html">pl.zajavka.api.controller.rest.CepikRestControllerTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.451s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/pl.zajavka.api.controller.rest.PurchaseRestControllerWebMvcTest.html">pl.zajavka.api.controller.rest.PurchaseRestControllerWebMvcTest</a>
+</td>
+<td>22</td>
+<td>0</td>
+<td>0</td>
+<td>0.392s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="classes/pl.zajavka.infrastructure.database.repository.jpa.CarToBuyJpaRepositoryTest.html">pl.zajavka.infrastructure.database.repository.jpa.CarToBuyJpaRepositoryTest</a>
+</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0.445s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/pl.zajavka.integration.HomeControllerIT.html">pl.zajavka.integration.HomeControllerIT</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.356s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
 <a href="classes/pl.zajavka.integration.rest.CepikIT.html">pl.zajavka.integration.rest.CepikIT</a>
 </td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
-<td>8.170s</td>
+<td>7.520s</td>
 <td class="success">100%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="classes/pl.zajavka.integration.rest.PurchaseIT.html">pl.zajavka.integration.rest.PurchaseIT</a>
+</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>2.140s</td>
+<td class="failures">50%</td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +252,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 6 lip 2023, 23:17:35</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 7 lip 2023, 08:04:58</p>
 </div>
 </div>
 </body>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.zajavka.integration.HomeControllerIT" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-07T06:04:43" hostname="LAPTOP-O9433SLL" time="0.359">
+  <properties/>
+  <testcase name="thatMechanicPageRequiredSigningIn()" classname="pl.zajavka.integration.HomeControllerIT" time="0.325"/>
+  <testcase name="thatHomePageRequiredSigningIn()" classname="pl.zajavka.integration.HomeControllerIT" time="0.031"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+[Test worker] INFO  p.z.integration.HomeControllerIT - Starting HomeControllerIT using Java 17.0.1 with PID 17140 (started by Asuseusz in C:\Users\marys\Desktop\zaJavka\Car-Dealership)
+[Test worker] INFO  p.z.integration.HomeControllerIT - The following 1 profile is active: "test"
+[Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 132 ms. Found 14 JPA repository interfaces.
+[Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+[Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+[Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+[Test worker] INFO  o.a.c.c.C.[.[.[/car-dealership] - Initializing Spring embedded WebApplicationContext
+[Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2392 ms
+[Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+[Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@2c80d2e0
+[Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+[Test worker] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/car_dealership (PostgreSQL 14.6)
+[Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 15 migrations (execution time 00:00.046s)
+[Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 3.1
+[Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+[Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+[Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[Test worker] INFO  org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@11214149
+[Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+[Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7510139b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@780e214b, org.springframework.security.web.context.SecurityContextHolderFilter@f053608, org.springframework.security.web.header.HeaderWriterFilter@5d236bde, org.springframework.security.web.authentication.logout.LogoutFilter@5a5e0a85, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f3030da, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2d712bb7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@14673fc2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cf1a395, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bcac08b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a0f6b74, org.springframework.security.web.access.ExceptionTranslationFilter@4d2f5474, org.springframework.security.web.access.intercept.AuthorizationFilter@43a5e40c]
+[Test worker] WARN  o.s.s.c.a.web.builders.WebSecurity - 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+[Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+[Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 63274 (http) with context path '/car-dealership'
+[Test worker] INFO  p.z.integration.HomeControllerIT - Started HomeControllerIT in 7.595 seconds (process running for 42.101)
+[http-nio-auto-1-exec-2] INFO  o.a.c.c.C.[.[.[/car-dealership] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[http-nio-auto-1-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[http-nio-auto-1-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[http-nio-auto-1-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/mechanic':
+
+org.apache.catalina.connector.RequestFacade@ca8583d
+
+servletPath:/mechanic
+pathInfo:null
+headers: 
+accept: text/plain, application/json, application/*+json, */*
+user-agent: Java/17.0.1
+host: localhost:63274
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-3] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@42acf78c
+
+servletPath:/login
+pathInfo:null
+headers: 
+accept: text/plain, application/json, application/*+json, */*
+user-agent: Java/17.0.1
+host: localhost:63274
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-7] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@5cf89b0a
+
+servletPath:/
+pathInfo:null
+headers: 
+accept: text/plain, application/json, application/*+json, */*
+user-agent: Java/17.0.1
+host: localhost:63274
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@1cc0db71
+
+servletPath:/login
+pathInfo:null
+headers: 
+accept: text/plain, application/json, application/*+json, */*
+user-agent: Java/17.0.1
+host: localhost:63274
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

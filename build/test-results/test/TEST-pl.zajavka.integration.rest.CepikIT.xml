@@ -1,106 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.zajavka.integration.rest.CepikIT" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-06T21:17:24" hostname="LAPTOP-O9433SLL" time="8.174">
+<testsuite name="pl.zajavka.integration.rest.CepikIT" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-07T06:04:45" hostname="LAPTOP-O9433SLL" time="7.523">
   <properties/>
-  <testcase name="contextLoaded()" classname="pl.zajavka.integration.rest.CepikIT" time="1.183"/>
-  <testcase name="thatFindingRandomVehicleWorksCorrectly()" classname="pl.zajavka.integration.rest.CepikIT" time="6.987"/>
-  <system-out><![CDATA[23:17:02,318 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.7
-23:17:02,360 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback-test.xml] at [file:/C:/Users/marys/Desktop/zaJavka/Car-Dealership/build/resources/test/logback-test.xml]
-23:17:02,615 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
-23:17:02,615 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-23:17:02,633 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-23:17:02,635 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
-23:17:02,694 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-23:17:02,694 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
-23:17:02,695 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@34997338 - End of configuration.
-23:17:02,696 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@57eda880 - Registering current configuration as safe fallback point
-
-[Test worker] INFO  wiremock.org.eclipse.jetty.util.log - Logging initialized @4023ms
+  <testcase name="contextLoaded()" classname="pl.zajavka.integration.rest.CepikIT" time="4.069"/>
+  <testcase name="thatFindingRandomVehicleWorksCorrectly()" classname="pl.zajavka.integration.rest.CepikIT" time="3.451"/>
+  <system-out><![CDATA[[Test worker] INFO  wiremock.org.eclipse.jetty.util.log - Logging initialized @43982ms
 [Test worker] INFO  w.org.eclipse.jetty.server.Server - jetty-9.2.z-SNAPSHOT
-[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@690bc15e{/__admin,null,AVAILABLE}
-[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@1debc91c{/,null,AVAILABLE}
-[Test worker] INFO  w.o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@7636823f{HTTP/1.1}{0.0.0.0:9999}
-[Test worker] INFO  w.org.eclipse.jetty.server.Server - Started @4263ms
-23:17:05,635 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
-23:17:05,635 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-23:17:05,636 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-23:17:05,637 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [charstet] in [ch.qos.logback.classic.encoder.PatternLayoutEncoder]
-23:17:05,637 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-23:17:05,638 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@210d2a6c - Propagating INFO level on Logger[ROOT] onto the JUL framework
-23:17:05,640 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
-23:17:05,640 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@3bec5821 - End of configuration.
-23:17:05,640 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@4086d8fb - Registering current configuration as safe fallback point
-
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.1.0)
-
-[background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
-[Test worker] INFO  pl.zajavka.integration.rest.CepikIT - Starting CepikIT using Java 17.0.1 with PID 19232 (started by Asuseusz in C:\Users\marys\Desktop\zaJavka\Car-Dealership)
-[Test worker] INFO  pl.zajavka.integration.rest.CepikIT - The following 1 profile is active: "test"
-[Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 674 ms. Found 14 JPA repository interfaces.
-[Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
-[Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
-[Test worker] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-[Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
-[Test worker] INFO  o.a.c.c.C.[.[.[/car-dealership] - Initializing Spring embedded WebApplicationContext
-[Test worker] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5988 ms
-[Test worker] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
-[Test worker] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
-[Test worker] INFO  o.f.c.i.license.VersionPrinter - 
-[Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3663af34
-[Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[Test worker] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/car_dealership (PostgreSQL 14.6)
-[Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 15 migrations (execution time 00:00.116s)
-[Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 3.1
-[Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
-[Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-[Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
-[Test worker] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
-[Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
-[Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-[Test worker] INFO  org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5c20841d
-[Test worker] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
-[Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[Test worker] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-[Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[Test worker] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c8e0773, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b5db3a, org.springframework.security.web.context.SecurityContextHolderFilter@1c5fc, org.springframework.security.web.header.HeaderWriterFilter@1cfde650, org.springframework.security.web.authentication.logout.LogoutFilter@6ac3ce34, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6642ea55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47b8f783, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5406ce9f, org.springframework.security.web.access.ExceptionTranslationFilter@3c16cd6c, org.springframework.security.web.access.intercept.AuthorizationFilter@b8c4bcb]
-[Test worker] WARN  o.s.s.c.a.web.builders.WebSecurity - 
-
-********************************************************************
-**********        Security debugging is enabled.       *************
-**********    This may include sensitive information.  *************
-**********      Do not use in a production system!     *************
-********************************************************************
-
-
-[Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
-[Test worker] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 63504 (http) with context path '/car-dealership'
-[Test worker] INFO  pl.zajavka.integration.rest.CepikIT - Started CepikIT in 19.909 seconds (process running for 24.276)
-[http-nio-auto-1-exec-2] INFO  o.a.c.c.C.[.[.[/car-dealership] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[http-nio-auto-1-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[http-nio-auto-1-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-[http-nio-auto-1-exec-2] INFO  Spring Security Debugger - 
+[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@4ec8083{/__admin,null,AVAILABLE}
+[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@7ed3fbf6{/,null,AVAILABLE}
+[Test worker] INFO  w.o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@6c1315c3{HTTP/1.1}{0.0.0.0:9999}
+[Test worker] INFO  w.org.eclipse.jetty.server.Server - Started @44301ms
+[http-nio-auto-1-exec-10] INFO  Spring Security Debugger - 
 
 ************************************************************
 
-Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
+Request received for POST '/login':
 
-org.apache.catalina.connector.RequestFacade@642d185f
+org.apache.catalina.connector.RequestFacade@3f221035
 
-servletPath:/api/cepik/random
+servletPath:/login
 pathInfo:null
 headers: 
-content-type: application/json
-accept: application/json, application/javascript, text/javascript, text/json
-host: localhost:63504
+accept: */*
+content-type: application/x-www-form-urlencoded; charset=ISO-8859-1
+content-length: 32
+host: localhost:63274
 connection: Keep-Alive
 user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 accept-encoding: gzip,deflate
@@ -112,6 +35,9 @@ Security filter chain: [
   SecurityContextHolderFilter
   HeaderWriterFilter
   LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
   RequestCacheAwareFilter
   SecurityContextHolderAwareRequestFilter
   AnonymousAuthenticationFilter
@@ -123,21 +49,266 @@ Security filter chain: [
 ************************************************************
 
 
-[qtp268086000-25] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+[http-nio-auto-1-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+New HTTP session created: 9793856581209220AD26AE1FB1C08881
+
+Call stack: 
+
+	at org.springframework.security.web.debug.Logger.info(Logger.java:46)
+	at org.springframework.security.web.debug.DebugFilter$DebugRequestWrapper.getSession(DebugFilter.java:171)
+	at org.springframework.security.web.debug.DebugFilter$DebugRequestWrapper.getSession(DebugFilter.java:181)
+	at jakarta.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:221)
+	at jakarta.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:221)
+	at org.springframework.security.web.context.HttpSessionSecurityContextRepository.saveContextInHttpSession(HttpSessionSecurityContextRepository.java:169)
+	at org.springframework.security.web.context.HttpSessionSecurityContextRepository.saveContext(HttpSessionSecurityContextRepository.java:152)
+	at org.springframework.security.web.context.DelegatingSecurityContextRepository.saveContext(DelegatingSecurityContextRepository.java:77)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.successfulAuthentication(AbstractAuthenticationProcessingFilter.java:325)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:241)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90)
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78)
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for POST '/logout':
+
+org.apache.catalina.connector.RequestFacade@13e73485
+
+servletPath:/logout
+pathInfo:null
+headers: 
+content-type: application/json
+cookie: JSESSIONID=9793856581209220AD26AE1FB1C08881
+accept: application/json, application/javascript, text/javascript, text/json
+content-length: 0
+host: localhost:63274
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for POST '/login':
+
+org.apache.catalina.connector.RequestFacade@15361921
+
+servletPath:/login
+pathInfo:null
+headers: 
+accept: */*
+content-type: application/x-www-form-urlencoded; charset=ISO-8859-1
+content-length: 32
+host: localhost:63274
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+New HTTP session created: 29FD75F562F0C91C4B79E4AB30FB6ED0
+
+Call stack: 
+
+	at org.springframework.security.web.debug.Logger.info(Logger.java:46)
+	at org.springframework.security.web.debug.DebugFilter$DebugRequestWrapper.getSession(DebugFilter.java:171)
+	at org.springframework.security.web.debug.DebugFilter$DebugRequestWrapper.getSession(DebugFilter.java:181)
+	at jakarta.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:221)
+	at jakarta.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:221)
+	at org.springframework.security.web.context.HttpSessionSecurityContextRepository.saveContextInHttpSession(HttpSessionSecurityContextRepository.java:169)
+	at org.springframework.security.web.context.HttpSessionSecurityContextRepository.saveContext(HttpSessionSecurityContextRepository.java:152)
+	at org.springframework.security.web.context.DelegatingSecurityContextRepository.saveContext(DelegatingSecurityContextRepository.java:77)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.successfulAuthentication(AbstractAuthenticationProcessingFilter.java:325)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:241)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90)
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78)
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+************************************************************
+
+
 [http-nio-auto-1-exec-1] INFO  Spring Security Debugger - 
 
 ************************************************************
 
 Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
 
-org.apache.catalina.connector.RequestFacade@464bca00
+org.apache.catalina.connector.RequestFacade@24bb022f
 
 servletPath:/api/cepik/random
 pathInfo:null
 headers: 
 content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
 accept: application/json, application/javascript, text/javascript, text/json
-host: localhost:63504
+host: localhost:63274
 connection: Keep-Alive
 user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 accept-encoding: gzip,deflate
@@ -149,6 +320,9 @@ Security filter chain: [
   SecurityContextHolderFilter
   HeaderWriterFilter
   LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
   RequestCacheAwareFilter
   SecurityContextHolderAwareRequestFilter
   AnonymousAuthenticationFilter
@@ -160,92 +334,22 @@ Security filter chain: [
 ************************************************************
 
 
-[http-nio-auto-1-exec-3] INFO  Spring Security Debugger - 
-
-************************************************************
-
-Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
-
-org.apache.catalina.connector.RequestFacade@66d5d030
-
-servletPath:/api/cepik/random
-pathInfo:null
-headers: 
-content-type: application/json
-accept: application/json, application/javascript, text/javascript, text/json
-host: localhost:63504
-connection: Keep-Alive
-user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-accept-encoding: gzip,deflate
-
-
-Security filter chain: [
-  DisableEncodeUrlFilter
-  WebAsyncManagerIntegrationFilter
-  SecurityContextHolderFilter
-  HeaderWriterFilter
-  LogoutFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  ExceptionTranslationFilter
-  AuthorizationFilter
-]
-
-
-************************************************************
-
-
-[http-nio-auto-1-exec-4] INFO  Spring Security Debugger - 
-
-************************************************************
-
-Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
-
-org.apache.catalina.connector.RequestFacade@4f76d792
-
-servletPath:/api/cepik/random
-pathInfo:null
-headers: 
-content-type: application/json
-accept: application/json, application/javascript, text/javascript, text/json
-host: localhost:63504
-connection: Keep-Alive
-user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-accept-encoding: gzip,deflate
-
-
-Security filter chain: [
-  DisableEncodeUrlFilter
-  WebAsyncManagerIntegrationFilter
-  SecurityContextHolderFilter
-  HeaderWriterFilter
-  LogoutFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  ExceptionTranslationFilter
-  AuthorizationFilter
-]
-
-
-************************************************************
-
-
+[qtp1811001461-393] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
 [http-nio-auto-1-exec-5] INFO  Spring Security Debugger - 
 
 ************************************************************
 
 Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
 
-org.apache.catalina.connector.RequestFacade@6776d1b9
+org.apache.catalina.connector.RequestFacade@2eea4e29
 
 servletPath:/api/cepik/random
 pathInfo:null
 headers: 
 content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
 accept: application/json, application/javascript, text/javascript, text/json
-host: localhost:63504
+host: localhost:63274
 connection: Keep-Alive
 user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 accept-encoding: gzip,deflate
@@ -257,42 +361,9 @@ Security filter chain: [
   SecurityContextHolderFilter
   HeaderWriterFilter
   LogoutFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  ExceptionTranslationFilter
-  AuthorizationFilter
-]
-
-
-************************************************************
-
-
-[http-nio-auto-1-exec-6] INFO  Spring Security Debugger - 
-
-************************************************************
-
-Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
-
-org.apache.catalina.connector.RequestFacade@1bfd3810
-
-servletPath:/api/cepik/random
-pathInfo:null
-headers: 
-content-type: application/json
-accept: application/json, application/javascript, text/javascript, text/json
-host: localhost:63504
-connection: Keep-Alive
-user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-accept-encoding: gzip,deflate
-
-
-Security filter chain: [
-  DisableEncodeUrlFilter
-  WebAsyncManagerIntegrationFilter
-  SecurityContextHolderFilter
-  HeaderWriterFilter
-  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
   RequestCacheAwareFilter
   SecurityContextHolderAwareRequestFilter
   AnonymousAuthenticationFilter
@@ -310,14 +381,15 @@ Security filter chain: [
 
 Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
 
-org.apache.catalina.connector.RequestFacade@26042863
+org.apache.catalina.connector.RequestFacade@523f6ee5
 
 servletPath:/api/cepik/random
 pathInfo:null
 headers: 
 content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
 accept: application/json, application/javascript, text/javascript, text/json
-host: localhost:63504
+host: localhost:63274
 connection: Keep-Alive
 user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 accept-encoding: gzip,deflate
@@ -329,6 +401,9 @@ Security filter chain: [
   SecurityContextHolderFilter
   HeaderWriterFilter
   LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
   RequestCacheAwareFilter
   SecurityContextHolderAwareRequestFilter
   AnonymousAuthenticationFilter
@@ -340,9 +415,210 @@ Security filter chain: [
 ************************************************************
 
 
-[Test worker] INFO  w.o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@7636823f{HTTP/1.1}{0.0.0.0:9999}
-[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@1debc91c{/,null,UNAVAILABLE}
-[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@690bc15e{/__admin,null,UNAVAILABLE}
+[http-nio-auto-1-exec-6] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
+
+org.apache.catalina.connector.RequestFacade@408e4d47
+
+servletPath:/api/cepik/random
+pathInfo:null
+headers: 
+content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
+accept: application/json, application/javascript, text/javascript, text/json
+host: localhost:63274
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
+
+org.apache.catalina.connector.RequestFacade@12073699
+
+servletPath:/api/cepik/random
+pathInfo:null
+headers: 
+content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
+accept: application/json, application/javascript, text/javascript, text/json
+host: localhost:63274
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
+
+org.apache.catalina.connector.RequestFacade@62b4a1f6
+
+servletPath:/api/cepik/random
+pathInfo:null
+headers: 
+content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
+accept: application/json, application/javascript, text/javascript, text/json
+host: localhost:63274
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/cepik/random?firstRegistrationDateFrom=2022-01-01&firstRegistrationDateTo=2022-06-30':
+
+org.apache.catalina.connector.RequestFacade@3dc003f2
+
+servletPath:/api/cepik/random
+pathInfo:null
+headers: 
+content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
+accept: application/json, application/javascript, text/javascript, text/json
+host: localhost:63274
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[http-nio-auto-1-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for POST '/logout':
+
+org.apache.catalina.connector.RequestFacade@214b6634
+
+servletPath:/logout
+pathInfo:null
+headers: 
+content-type: application/json
+cookie: JSESSIONID=29FD75F562F0C91C4B79E4AB30FB6ED0
+accept: application/json, application/javascript, text/javascript, text/json
+content-length: 0
+host: localhost:63274
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  DefaultLoginPageGeneratingFilter
+  DefaultLogoutPageGeneratingFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+[Test worker] INFO  w.o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@6c1315c3{HTTP/1.1}{0.0.0.0:9999}
+[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@7ed3fbf6{/,null,UNAVAILABLE}
+[Test worker] INFO  w.o.e.j.s.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@4ec8083{/__admin,null,UNAVAILABLE}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
